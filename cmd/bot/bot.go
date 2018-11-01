@@ -191,6 +191,26 @@ var WOW *SoundCollection = &SoundCollection{
 	},
 }
 
+var NUBESUKO *SoundCollection = &SoundCollection{
+	Prefix: "nubesuko",
+	Commands: []string{
+		"!nubesukohorn",
+	},
+	Sounds: []*Sound{
+		createSound("default", 50, 250),
+	},
+}
+
+var KNZK *SoundCollection = &SoundCollection{
+	Prefix: "knzk",
+	Commands: []string{
+		"!knzkhorn",
+	},
+	Sounds: []*Sound{
+		createSound("default", 50, 250),
+	},
+}
+
 var COLLECTIONS []*SoundCollection = []*SoundCollection{
 	AIRHORN,
 	KHALED,
@@ -199,6 +219,8 @@ var COLLECTIONS []*SoundCollection = []*SoundCollection{
 	COW,
 	BIRTHDAY,
 	WOW,
+	NUBESUKO,
+	KNZK,
 }
 
 // Create a Sound struct
@@ -457,7 +479,7 @@ func playSound(play *Play, vc *discordgo.VoiceConnection) (err error) {
 
 func onReady(s *discordgo.Session, event *discordgo.Ready) {
 	log.Info("Recieved READY payload")
-	s.UpdateStatus(0, "airhornbot.com")
+	s.UpdateStatus(0, "running horn mode")
 }
 
 func scontains(key string, options ...string) bool {
