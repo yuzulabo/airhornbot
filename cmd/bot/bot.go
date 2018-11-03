@@ -199,6 +199,13 @@ var NUBESUKO *SoundCollection = &SoundCollection{
 	Sounds: []*Sound{
 		createSound("default", 50, 250),
 		createSound("yabai", 50, 250),
+		createSound("1", 50, 250),
+		createSound("2", 50, 250),
+		createSound("3", 50, 250),
+		createSound("4", 50, 250),
+		createSound("5", 50, 250),
+		createSound("6", 50, 250),
+		createSound("7", 50, 250),
 	},
 }
 
